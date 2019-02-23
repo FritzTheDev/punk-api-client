@@ -1,14 +1,20 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import AppNavbar from './components/Navbar';
+import Home from './components/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
     return (
-    <div>
-        <AppNavbar />
-    </div>
+    <Router>
+        <div>
+            <AppNavbar />
+            <Route exact path="/" component={Home}></Route>
+        </div>
+    </Router>
     );
 }
 
