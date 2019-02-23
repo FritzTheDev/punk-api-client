@@ -1,0 +1,19 @@
+{
+  "name": "punk-api-client",
+  "version": "0.1.0",
+  "description": "Client for the Punk Beer API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OttoVBismarck/punk-api-client.git"
+  },
+  "author": "Frederick JW Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OttoVBismarck/punk-api-client/issues"
+  },
+  "homepage": "https://github.com/OttoVBismarck/punk-api-client#readme"
+}
