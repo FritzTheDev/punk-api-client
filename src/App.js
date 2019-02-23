@@ -12,7 +12,10 @@ const App = () => {
     <Router>
         <div>
             <AppNavbar />
-            <Route exact path="/" component={Home}></Route>
+            <div style={{ marginTop: 56 }}> 
+                <Route exact path="/" component={Home} />
+                
+            </div>
         </div>
     </Router>
     );
