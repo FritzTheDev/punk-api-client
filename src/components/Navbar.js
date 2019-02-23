@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const AppNavbar = () => {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+        <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
             <Navbar.Brand>
                 Test
             </Navbar.Brand>
