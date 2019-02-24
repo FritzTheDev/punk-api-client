@@ -6,9 +6,7 @@ const AppNavbar = () => {
     return (
         <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
             <Link to="/">
-                <Navbar.Brand>
-                    Test
-                </Navbar.Brand>
+                <Navbar.Brand>Punk API Client</Navbar.Brand>
             </Link>
         </Navbar>
     )
