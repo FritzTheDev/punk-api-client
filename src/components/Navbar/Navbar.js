@@ -12,6 +12,9 @@ const AppNavbar = () => {
                         <Nav.Item>
                             <Link to="/" className="nav-link">Catalog</Link>
                         </Nav.Item>
+                        <Nav.Item>
+                            <Link to="/" className="nav-link">Favorites</Link>
+                        </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
         </Navbar>
