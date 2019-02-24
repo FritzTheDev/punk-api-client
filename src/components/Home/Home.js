@@ -1,8 +1,15 @@
 import React from 'react';
-
+import { Container, Row, Col } from 'react-bootstrap';
+import Searchbar from './components/Searchbar';
 const Home = () => {
     return (
-        <div>Home</div>
+        <Container>
+            <Row>
+                <Col md={{ span: 4, offset: 4 }}>
+                    <Searchbar />
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
