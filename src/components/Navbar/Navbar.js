@@ -4,21 +4,16 @@ import { Link } from 'react-router-dom';
 
 const AppNavbar = () => {
     return (
-        <Navbar bg="primary" variant="dark" expand="lg" fixed="top">
-            <Container>
-                <Link to="/">
-                    <Navbar.Brand>
-                        Test
-                    </Navbar.Brand>
-                </Link>
+        <Navbar bg="primary" variant="dark" expand="lg">
+                <Navbar.Toggle />
+                <Link to="/" className="navbar-brand">Punk API Client</Link>
                 <Navbar.Collapse>
                     <Nav className="mr-auto">
                         <Nav.Item>
-                            <Nav.Link>Test</Nav.Link>
+                            <Link to="/" className="nav-link">Home</Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
         </Navbar>
     )
 }
