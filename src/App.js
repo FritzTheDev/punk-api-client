@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import AppNavbar from './components/Navbar/Navbar';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
