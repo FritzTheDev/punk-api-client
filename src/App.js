@@ -12,7 +12,8 @@ const App = () => {
     <Router>
         <div>
             <AppNavbar />
-            <div style={{ marginTop: 56 }}> 
+            {/* div to account for "Fixed" Navbar not taking space */}
+            <div style={{ marginTop: 56 }}>
                 <Route exact path="/" component={Home} />
                 
             </div>
