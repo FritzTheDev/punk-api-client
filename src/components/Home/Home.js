@@ -12,7 +12,7 @@ const Home = () => {
                     <Searchbar />
                 </Col>
             </Row>
-            
+            <BeerCardList />
         </Container>
     )
 }
