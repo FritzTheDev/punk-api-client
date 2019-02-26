@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
+import BeerCard from './BeerCard';
+
 export default class BeerCardList extends Component {
   constructor(props) {
     super(props);
-    this.state = { beerList: [{ name: "FritzBier" }, { name: "GraceBier" }] }
+    this.state = { beerList: [{ name: "Punk IPA 2007 - 2010" }, { name: "GraceBier" }] }
   }
 
   renderCards() {
     return this.state.beerList.map(({ name }) => {
       return (
-        <Col lg="3">{name}</Col>
+        <BeerCard name={name} key={name} />
       );
     });
   }
