@@ -22,6 +22,6 @@ export default class BeerCardList extends Component {
       <Row>
         {this.renderCards()}
       </Row>
-    )
+    );
   }
 }
