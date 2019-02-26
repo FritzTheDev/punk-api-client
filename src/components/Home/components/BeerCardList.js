@@ -19,9 +19,9 @@ export default class BeerCardList extends Component {
 
   render() {
     return (
-          <Row>
-            {this.renderCards()}
-          </Row>
+      <Row>
+        {this.renderCards()}
+      </Row>
     )
   }
 }
