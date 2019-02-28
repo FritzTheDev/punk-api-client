@@ -5,6 +5,6 @@ export function loadBeers() {
     .then(res => res.json())
     .then(
       data => dispatch({ type: LOAD_BEER_SUCCESS, data }),
-      err => dispatch({ type: LOAD_BEER_FAILURE, err })
+      error => dispatch({ type: LOAD_BEER_FAILURE, error })
     );
 }

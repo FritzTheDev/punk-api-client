@@ -27,6 +27,10 @@ export default class BeerCardList extends Component {
   }
 }
 
-
+const mapStateToProps = (state, ownProps) => ({
+  loading,
+  beers,
+  error
+});
 
 export default connect()(BeerCardList);

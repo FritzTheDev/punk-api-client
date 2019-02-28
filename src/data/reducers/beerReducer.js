@@ -13,13 +13,13 @@ export default function beerReducer(state = initialState, action) {
         ...state,
         loading: false,
         error: null,
-        beers: action.payload
+        beers: action.data
       };
     case LOAD_BEER_FAILURE:
       return {
         ...state,
         loading: false,
-        error: action.payload.error,
+        error: action.error,
         beers: []
       }
     default:
