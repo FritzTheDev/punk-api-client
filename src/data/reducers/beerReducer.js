@@ -1,4 +1,4 @@
-const initialState = { beers:[], loading: false, error: null };
+const initialState = { beers: [], loading: false, error: null };
 import { LOAD_BEER_REQUEST, LOAD_BEER_SUCCESS, LOAD_BEER_FAILURE} from '../constants/index';
 
 export default function beerReducer(state = initialState, action) {
