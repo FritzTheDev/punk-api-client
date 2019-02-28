@@ -10,11 +10,15 @@ class BeerCardList extends Component {
     super(props);
     this.state = { beerList: [{ name: "Punk IPA 2007 - 2010", imageUrl: "https://images.punkapi.com/v2/192.png", tagline: "Post Modern Classic. Spiky. Tropical. Hoppy." }, { name: "GraceBier" }] }
   }
+  componentDidMount() {
+    console.log(this.props);
+    this.props.loadBeers();
+  }
 
   renderCards() {
-    return this.state.beerList.map(({ name, imageUrl, tagline }) => {
+    return this.props.beers.map(({ name, image_url, tagline }) => {
       return (
-        <BeerCard name={name} key={name} imageUrl={imageUrl} tagline={tagline} />
+        <BeerCard name={name} key={name} imageUrl={image_url} tagline={tagline} />
       );
     });
   }
@@ -28,17 +32,17 @@ class BeerCardList extends Component {
   }
 }
 
-const mapStateToProps = ({ loading, beers, error }, ownProps) => ({
-  loading,
-  beers,
-  error,
-  ...ownProps
+const mapStateToProps = ({ beerReducer }, ownProps) => ({
+  ...ownProps,
+  beers: beerReducer.beers,
+  loading: beerReducer.loading,
+  error: beerReducer.error
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  loadBeers: () => {
-    dispatch(loadBeers);
+const mapDispatchToProps = dispatch => {
+  return {
+    loadBeers: () => dispatch(loadBeers())
   }
-})
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(BeerCardList);
