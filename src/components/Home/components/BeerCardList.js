@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 import BeerCard from './BeerCard';
 
@@ -25,3 +26,7 @@ export default class BeerCardList extends Component {
     );
   }
 }
+
+
+
+export default connect()(BeerCardList);
