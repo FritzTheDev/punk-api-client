@@ -3,8 +3,9 @@ import { Col, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 import BeerCard from './BeerCard';
+import { loadBeers } from '../../../data/actions/beerActions';
 
-export default class BeerCardList extends Component {
+class BeerCardList extends Component {
   constructor(props) {
     super(props);
     this.state = { beerList: [{ name: "Punk IPA 2007 - 2010", imageUrl: "https://images.punkapi.com/v2/192.png", tagline: "Post Modern Classic. Spiky. Tropical. Hoppy." }, { name: "GraceBier" }] }
@@ -27,10 +28,17 @@ export default class BeerCardList extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = ({ loading, beers, error }, ownProps) => ({
   loading,
   beers,
-  error
+  error,
+  ...ownProps
 });
 
-export default connect()(BeerCardList);
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  loadBeers: () => {
+    dispatch(loadBeers);
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(BeerCardList);
