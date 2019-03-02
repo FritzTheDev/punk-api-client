@@ -11,7 +11,6 @@ class BeerCardList extends Component {
     this.state = { beerList: [{ name: "Punk IPA 2007 - 2010", imageUrl: "https://images.punkapi.com/v2/192.png", tagline: "Post Modern Classic. Spiky. Tropical. Hoppy." }, { name: "GraceBier" }] }
   }
   componentDidMount() {
-    console.log(this.props);
     this.props.loadBeers();
   }
 
